@@ -1,0 +1,2071 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  background: #f5f5f5;
+}
+
+header.normal {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 64px;
+  background-color: #0d253f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.sub_media {
+  max-width: 1400px;
+  width: 100%;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav_wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo img {
+  width: 154px;
+}
+
+.navigation {
+  list-style: none;
+  display: flex;
+  gap: 12px;
+}
+
+.navigation a {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.primary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.icon { width: 22px; }
+.icon-white { filter: invert(1); }
+.translate div { border: 1px solid #fff; color: #fff; padding: 2px 6px; font-size: 0.85rem; }
+.avatar {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: #3b82f6; color: #fff;
+  display: flex; align-items: center; justify-content: center;
+}
+
+main { margin-top: 64px; }
+.page_wrapper { max-width: 1400px; margin: 0 auto; padding: 20px; }
+.section-title { font-size: 1.6rem; margin-bottom: 20px; }
+.content_wrapper { display: flex; gap: 20px; align-items: flex-start; }
+
+/* LEFT COLUMN */
+.left_column { width: 260px; }
+.filter_panel { border: 1px solid #e3e3e3; border-radius: 8px; background: #fff; overflow: hidden; margin-bottom: 20px; }
+.filter_panel .name { padding: 14px 16px; display: flex; justify-content: space-between; cursor: pointer; }
+.filter_panel .name h2 { font-size: 1rem; }
+.filter_panel .chevron-right { font-size: 22px; transition: transform 0.25s ease; }
+.filter_panel.closed .chevron-right { transform: rotate(0deg); }
+.filter_panel:not(.closed) .chevron-right { transform: rotate(90deg); }
+.filter_panel .filter { display: block; padding: 14px 16px; border-top: 1px solid #eee; }
+.filter_panel.closed .filter { display: none; }
+#sort_by, input.full_width, select { width: 100%; padding: 6px; margin-bottom: 10px; }
+.year_column { display: flex; justify-content: space-between; margin-bottom: 10px; }
+span.col_1 { width: 60px; color: #a4a4a4; }
+.multi_select.text li { display: inline-block; border: 1px solid #9e9e9e; border-radius: 14px; padding: 4px 12px; margin: 5px 5px 0 0; cursor: pointer; }
+.multi_select.text li.selected, .multi_select.text li:hover { background-color: #01b4e4; color: #fff; border-color: #01b4e4; }
+
+.range { margin-bottom: 14px; }
+.range .labels { display: flex; justify-content: space-between; font-size: 0.8rem; }
+
+.apply { text-align: center; margin-top: 10px; height: 36px; border-radius: 20px; background-color: #031d33; display: flex; justify-content: center; align-items: center; }
+.apply.disabled { background-color: #e4e4e4; }
+.apply a { color: #fff; font-weight: 600; text-decoration: none; }
+.apply.disabled a { color: rgba(0,0,0,.5); pointer-events: none; }
+
+/* MOVIES GRID */
+.movies-grid { flex: 1; display: grid; grid-template-columns: repeat(auto-fill,minmax(160px,1fr)); gap: 20px; }
+.movie-card { background: #1c3144; border-radius: 8px; overflow: hidden; color: #fff; }
+.movie-card img { width: 100%; display: block; }
+.movie-info { padding: 10px; }
+.movie-info h3 { font-size: 0.9rem; margin-bottom: 6px; }
+
+/* FOOTER */
+.site-footer { background: #0d253f; color: #fff; margin-top: 40px; padding-top: 40px; }
+.footer-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; padding: 0 40px; }
+.footer-join img { width: 130px; display: block; }
+.footer-user { margin-top: 20px; display: inline-block; padding: 10px 18px; border-radius: 20px; background: #fff; color: #01b4e4; font-weight: 700; text-decoration: none; }
+.footer-columns { display: flex; gap: 40px; flex-wrap: wrap; }
+.footer-column h3 { font-size: 1.1rem; margin-bottom: 8px; text-transform: uppercase; }
+.footer-column ul { list-style: none; padding: 0; margin: 0; }
+.footer-column li { line-height: 1.6em; }
+.footer-column a { color: #fff; text-decoration: none; }
+.footer-column a:hover { text-decoration: underline; }
+.footer-build { text-align: center; padding: 10px 0; opacity: 0.15; }
+
+
+
+/* ------------------- Release Dates Clean Styles ------------------- */
+.filter h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #031d33;
+}
+
+.k-form-field {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.k-checkbox {
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+}
+
+.k-checkbox-label {
+  font-size: 0.9rem;
+  color: #031d33;
+}
+
+.year_column {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.year_column input[type="date"] {
+  width: calc(100% - 70px);
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+span.col_1 {
+  width: 60px;
+  color: #a4a4a4;
+  font-size: 0.9rem;
+}
+
+/* Disable date input if "All releases" is checked */
+#all_releases:checked ~ .year_column input[type="date"] {
+  background-color: #f0f0f0;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* Hover effect on checkboxes label */
+.k-form-field label:hover {
+  cursor: pointer;
+}
+
+/* Optional: Add spacing between the checkbox and date inputs */
+.filter .year_column:first-of-type {
+  margin-top: 5px;
+}
+
+
+.labels.hide {
+  display: none;
+}
+
+.labels {
+  margin-top: 6px;
+}
+
+.full_width {
+  width: 100%;
+  padding: 6px;
+}
+
+
+#release_country option {
+  padding-left: 25px;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+#release_country option[value="AM"] {
+  background-image: url('https://flagcdn.com/24x18/am.png');
+}
+
+/* You can add more flags dynamically using JS if needed */
+
+
+#release_country {
+  height: 32px;
+}
+
+#release_country option {
+  padding-left: 28px;
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: 20px 15px;
+}
+
+
+/* GENRES PANEL */
+div.filter h3 {
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  font-size: 1em;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+ul.multi_select.text {
+  margin-top: -8px;
+  padding: 0;
+  list-style: none;
+}
+
+ul.multi_select.text li {
+  display: inline-flex;
+  border: 1px solid #9e9e9e;
+  border-radius: 14px;
+  padding: 4px 12px;
+  font-size: .9em;
+  margin-right: 6px;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+ul.multi_select.text li:last-of-type {
+  margin-right: 0;
+}
+
+ul.multi_select.text li.selected,
+ul.multi_select.text li:hover {
+  background-color: rgba(0, 145, 255, 1); /* TMDB light blue */
+  color: #fff;
+  border-color: rgba(0, 145, 255, 1);
+}
+
+ul.multi_select.text li.no_hover,
+ul.multi_select.text li.no_hover a {
+  background-color: transparent;
+  color: #000;
+  border-color: #9e9e9e;
+}
+
+ul.multi_select.text li a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul.multi_select.text li a:hover {
+  color: #fff;
+}
+
+
+
+#release_country option {
+  padding-left: 20px;
+  background-size: 16px 12px;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+
+
+/* ================= FILTER SELECTS ================= */
+
+.filter select,
+.full_width {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 4px;
+  border: 1px solid #d7d7d7;
+  background-color: #fff;
+  font-size: 14px;
+  color: #000;
+  cursor: pointer;
+}
+
+.filter select:focus {
+  outline: none;
+  border-color: #01b4e4;
+  box-shadow: 0 0 0 1px #01b4e4;
+}
+
+.filter h3 {
+  font-size: 15px;
+  margin: 18px 0 8px;
+  font-weight: 600;
+}
+
+
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-trigger {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.dropdown-panel {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #ccc;
+  z-index: 10;
+}
+
+.dropdown-panel input {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  outline: none;
+}
+
+#country_list {
+  max-height: 220px;
+  overflow-y: auto;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#country_list li {
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+#country_list li:hover {
+  background: #f1f1f1;
+}
+
+.hide {
+  display: none;
+}
+
+
+
+/* FILTER PANEL TOGGLE */
+.filter_panel .filter {
+  display: block;
+}
+
+.filter_panel.closed .filter {
+  display: none;
+}
+
+/* rotate arrow */
+.filter_panel .chevron-right {
+  transition: transform 0.2s ease;
+}
+
+.filter_panel.closed .chevron-right {
+  transform: rotate(0deg);
+}
+
+.filter_panel:not(.closed) .chevron-right {
+  transform: rotate(90deg);
+}
+
+
+.language_dropdown {
+  position: relative;
+}
+
+#language_list {
+  max-height: 220px;
+  overflow-y: auto;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#language_list li {
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+#language_list li:hover {
+  background: #f1f1f1;
+}
+
+
+
+.slider-track {
+  position: absolute;
+  top: 7px;
+  height: 6px;
+  width: 100%;
+  background: #ddd;
+  border-radius: 3px;
+}
+
+.labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-top: 25px;
+  color: #666;
+}
+
+
+.filter_panel.closed .content {
+  display: none;
+}
+
+.filter_panel .name {
+  cursor: pointer;
+}
+
+
+
+/* ================= USER SCORE ================= */
+.user-score {
+  margin-bottom: 10px;
+}
+
+.user-score .slider-wrapper {
+  position: relative;
+  height: 40px;
+  padding: 0; /* no padding */
+  overflow: visible; /* allow input to overflow */
+}
+
+/* Range input */
+.user-score input[type="range"] {
+  position: absolute;
+  width: 110%;   /* make wider than wrapper */
+  left: -5%;     /* move slider left → first ball goes left, last goes right */
+  top: 22px;
+  pointer-events: none;
+  -webkit-appearance: none;
+  background: none;
+  z-index: 1;
+}
+
+
+
+/* Thumb (ball) */
+.user-score input[type="range"]::-webkit-slider-thumb {
+  pointer-events: auto;
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #01b4e4;
+  cursor: pointer;
+  margin-top: 4px; /* move thumb slightly below track */
+}
+.user-score input[type="range"]::-moz-range-thumb {
+  pointer-events: auto;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #01b4e4;
+  cursor: pointer;
+}
+
+/* Main track */
+.user-score .slider-track {
+  position: absolute;
+  top: 34px; /* keep track slightly above thumbs */
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #01b4e4;
+  border-radius: 4px;
+  z-index: 1;
+}
+
+/* Ticks */
+.user-score .ticks {
+  position: absolute;
+  top: 28px; /* ticks above track */
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+}
+.user-score .ticks span {
+  width: 1px;
+  height: 15px; /* short ticks */
+  background: #9e9e9e;
+  display: 1 1 100%;
+}
+
+/* Labels */
+.user-score .score-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #8c8c8c;
+  margin-top: 12px;
+}
+
+
+
+/* ================= MINIMUM USER VOTES ================= */
+.user-votes {
+  margin-bottom: 5px;
+  margin-top: -20px;
+}
+
+/* Slider wrapper */
+.user-votes .slider-wrapper {
+  position: relative;
+  height: 40px;
+  padding: 0;           /* no padding */
+  overflow: visible;    /* allow input to overflow */
+}
+
+/* Main track */
+.user-votes .slider-track {
+  position: absolute;
+  top: 34px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #01b4e4;
+  border-radius: 4px;
+  z-index: 1;
+}
+
+/* Range input */
+.user-votes input[type="range"] {
+  position: absolute;
+  width: 110%;   /* make wider than wrapper to allow full ball movement */
+  left: -5%;     /* shift slider so first ball can go a little left and last right */
+  top: 22px;
+  pointer-events: none;
+  -webkit-appearance: none;
+  background: none;
+  z-index: 4;
+}
+
+/* Thumb (ball) */
+.user-votes input[type="range"]::-webkit-slider-thumb {
+  pointer-events: auto;
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #01b4e4;
+  cursor: pointer;
+  margin-top: 4px;
+}
+.user-votes input[type="range"]::-moz-range-thumb {
+  pointer-events: auto;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #01b4e4;
+  cursor: pointer;
+}
+
+/* Ticks */
+.user-votes .ticks {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+}
+.user-votes .ticks span {
+  width: 1px;
+  height: 12px;           /* short tick */
+  background: #9e9e9e;
+  display: block;
+}
+
+/* Make labeled ticks slightly bigger */
+.user-votes .score-labels span {
+  font-size: 13px;
+  color: #8c8c8c;
+  position: relative;
+}
+
+/* optional: visually align bigger ticks with labels */
+.user-votes .score-labels span:nth-child(1),
+.user-votes .score-labels span:nth-child(2),
+.user-votes .score-labels span:nth-child(3),
+.user-votes .score-labels span:nth-child(4),
+.user-votes .score-labels span:nth-child(5),
+.user-votes .score-labels span:nth-child(6) {
+  font-weight: bold;   /* slightly bigger / bold to stand out */
+}
+
+/* Labels wrapper */
+.user-votes .score-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  padding: 0;
+}
+
+
+
+/* ================= RUNTIME ================= */
+.runtime {
+  margin-bottom: 10px;
+}
+
+.runtime .slider-wrapper {
+  position: relative;
+  height: 40px;
+  padding: 0;
+  overflow: visible;
+}
+
+/* Range inputs */
+.runtime input[type="range"] {
+  position: absolute;
+  width: 110%;   /* allows balls to go past first & last tick */
+  left: -5%;
+  top: 22px;
+  pointer-events: none;
+  -webkit-appearance: none;
+  background: none;
+  z-index: 4;
+}
+
+/* Thumbs (balls) */
+.runtime input[type="range"]::-webkit-slider-thumb {
+  pointer-events: auto;
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #01b4e4;
+  cursor: pointer;
+  margin-top: 4px;
+}
+.runtime input[type="range"]::-moz-range-thumb {
+  pointer-events: auto;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #01b4e4;
+  cursor: pointer;
+}
+
+/* Track */
+.runtime .slider-track {
+  position: absolute;
+  top: 34px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #01b4e4;
+  border-radius: 4px;
+  z-index: 1;
+}
+
+/* Ticks */
+.runtime .ticks {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+}
+.runtime .ticks span {
+  width: 1px;
+  height: 12px;
+  background: #9e9e9e;
+  display: block;
+}
+
+/* Labels */
+.runtime .score-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #8c8c8c;
+  margin-top: 12px;
+}
+
+
+.apply {
+  display: inline-block;
+  padding: 10px 25px;
+  background-color: #ccc; /* grey default */
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.apply.active {
+  background-color: #01b4e4; /* blue when active */
+}
+
+
+
+.load_more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    background-color: #007bff; /* blue */
+    padding: 10px 20px;
+    margin: 20px auto 0 auto; /* top margin to separate from cards */
+    border-radius: 6px;
+    width: 200px;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+
+.content_wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.right_column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the Load More button */
+}
+
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.load_more_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.load_more {
+  background-color: #01b4e4;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%; /* TMDB style: button spans the width */
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.load_more:hover {
+  background-color: #01779e;
+}
+
+
+.right_column {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.movies-grid {
+  display: grid;
+  /* Adjust columns to match TMDB style */
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); 
+  gap: 20px;
+  width: 100%;
+}
+
+.load_more {
+  margin: 30px 0;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #01b4e4;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
+/* Container for the circle */
+.user_score_chart {
+    position: relative;
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    background-color: #081c22; /* Dark circle background */
+    border-radius: 50%;
+    padding: 2px;
+    margin-top: -19px; /* Pulls it up over the image */
+    margin-left: 10px;
+}
+
+.user_score_chart canvas {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+}
+
+.user_score_chart .percent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 0.6em;
+    font-weight: bold;
+}
+
+.user_score_chart .percent span {
+    font-size: 0.5em;
+    margin-left: 1px;
+}
+
+/* Ensure movie-card is relative so the negative margin works */
+.movie-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.movie-card img {
+    border-radius: 8px;
+}
+
+
+
+/* The round button container */
+.options_container {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 10;
+    width: 26px;
+    height: 26px;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+/* Container for the 3 individual dots */
+.three_dots_wrapper {
+    display: flex;
+    gap: 2px; /* Equal space between each dot */
+    align-items: center;
+    justify-content: center;
+}
+
+/* The actual dots - perfectly identical */
+.three_dots_wrapper span {
+    width: 4px;
+    height: 4px;
+    background-color: #000;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.2s ease;
+}
+
+/* Hover Effects */
+.options_container:hover {
+    background-color: #01b4e4; /* TMDB Blue */
+}
+
+.options_container:hover .three_dots_wrapper span {
+    background-color: #fff; /* Dots turn white on blue background */
+}
+
+
+header.normal {
+    position: fixed; /* or sticky, depending on your layout */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100; /* Much higher than the dots (10) */
+    background-color: #032541; /* Ensure it's not transparent */
+}
+
+/* Ensure the main content doesn't hide under the fixed header */
+main {
+    padding-top: 20px; /* Adjust this to match your header's height */
+}
+
+
+
+.movie-info h3 {
+    font-weight: 700;
+    font-size: 1em;
+    margin: 0;
+    /* This creates the '...' after 2 lines */
+    display: -webkit-box;
+    -webkit-line-clamp: 2; 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 2.4em; /* Forces the box to always take up 2 lines of space */
+}
+
+
+
+.search_button_wrapper {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.apply_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 44px;
+    background-color: #e4e4e4; /* Light grey when disabled */
+    color: rgba(0,0,0,0.5);
+    font-size: 1.2em;
+    font-weight: 600;
+    border-radius: 20px;
+    cursor: not-allowed;
+    transition: all 0.2s ease;
+}
+
+/* When a user changes a filter, we add the .active class via JS */
+.apply_button.active {
+    background-color: #01b4e4; /* TMDB Blue */
+    color: #fff;
+    cursor: pointer;
+}
+
+.apply_button.active:hover {
+    background-color: #00a0d2;
+}
+
+
+
+
+/* Disabled state (default) */
+.apply_button {
+    width: 100%;
+    height: 44px;
+    background-color: #dbdbdb; /* Grey */
+    color: #999;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2em;
+    cursor: not-allowed;
+    transition: background-color 0.2s ease;
+}
+
+/* Active state (triggered by JS) */
+.apply_button.active {
+    background-color: #01b4e4; /* TMDB Blue */
+    color: #fff;
+}
+
+.apply_button.active:hover {
+    background-color: #00a0d2;
+}
+
+/* Genre selection styling */
+#with_genres li.selected {
+    background-color: #01b4e4;
+    border-color: #01b4e4;
+}
+#with_genres li.selected a {
+    color: #fff;
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  background: #f5f5f5;
+}
+
+header.normal {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 64px;
+  background-color: #0d253f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.sub_media {
+  max-width: 1400px;
+  width: 100%;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav_wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo img {
+  width: 154px;
+}
+
+.navigation {
+  list-style: none;
+  display: flex;
+  gap: 12px;
+}
+
+.navigation a {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.primary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.icon { width: 22px; }
+.icon-white { filter: invert(1); }
+.translate div { border: 1px solid #fff; color: #fff; padding: 2px 6px; font-size: 0.85rem; }
+.avatar {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: #3b82f6; color: #fff;
+  display: flex; align-items: center; justify-content: center;
+}
+
+main { margin-top: 64px; }
+.page_wrapper { max-width: 1400px; margin: 0 auto; padding: 20px; }
+.section-title { font-size: 1.6rem; margin-bottom: 20px; }
+.content_wrapper { display: flex; gap: 20px; align-items: flex-start; }
+
+/* LEFT COLUMN */
+.left_column { width: 260px; }
+.filter_panel { border: 1px solid #e3e3e3; border-radius: 8px; background: #fff; overflow: hidden; margin-bottom: 20px; }
+.filter_panel .name { padding: 14px 16px; display: flex; justify-content: space-between; cursor: pointer; }
+.filter_panel .name h2 { font-size: 1rem; }
+.filter_panel .chevron-right { font-size: 22px; transition: transform 0.25s ease; }
+.filter_panel.closed .chevron-right { transform: rotate(0deg); }
+.filter_panel:not(.closed) .chevron-right { transform: rotate(90deg); }
+.filter_panel .filter { display: block; padding: 14px 16px; border-top: 1px solid #eee; }
+.filter_panel.closed .filter { display: none; }
+#sort_by, input.full_width, select { width: 100%; padding: 6px; margin-bottom: 10px; }
+.year_column { display: flex; justify-content: space-between; margin-bottom: 10px; }
+span.col_1 { width: 60px; color: #a4a4a4; }
+.multi_select.text li { display: inline-block; border: 1px solid #9e9e9e; border-radius: 14px; padding: 4px 12px; margin: 5px 5px 0 0; cursor: pointer; }
+.multi_select.text li.selected, .multi_select.text li:hover { background-color: #01b4e4; color: #fff; border-color: #01b4e4; }
+
+.range { margin-bottom: 14px; }
+.range .labels { display: flex; justify-content: space-between; font-size: 0.8rem; }
+
+.apply { text-align: center; margin-top: 10px; height: 36px; border-radius: 20px; background-color: #031d33; display: flex; justify-content: center; align-items: center; }
+.apply.disabled { background-color: #e4e4e4; }
+.apply a { color: #fff; font-weight: 600; text-decoration: none; }
+.apply.disabled a { color: rgba(0,0,0,.5); pointer-events: none; }
+
+/* MOVIES GRID */
+.movies-grid { flex: 1; display: grid; grid-template-columns: repeat(auto-fill,minmax(160px,1fr)); gap: 20px; }
+.movie-card { background: #1c3144; border-radius: 8px; overflow: hidden; color: #fff; }
+.movie-card img { width: 100%; display: block; }
+.movie-info { padding: 10px; }
+.movie-info h3 { font-size: 0.9rem; margin-bottom: 6px; }
+
+/* FOOTER */
+.site-footer { background: #0d253f; color: #fff; margin-top: 40px; padding-top: 40px; }
+.footer-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; padding: 0 40px; }
+.footer-join img { width: 130px; display: block; }
+.footer-user { margin-top: 20px; display: inline-block; padding: 10px 18px; border-radius: 20px; background: #fff; color: #01b4e4; font-weight: 700; text-decoration: none; }
+.footer-columns { display: flex; gap: 40px; flex-wrap: wrap; }
+.footer-column h3 { font-size: 1.1rem; margin-bottom: 8px; text-transform: uppercase; }
+.footer-column ul { list-style: none; padding: 0; margin: 0; }
+.footer-column li { line-height: 1.6em; }
+.footer-column a { color: #fff; text-decoration: none; }
+.footer-column a:hover { text-decoration: underline; }
+.footer-build { text-align: center; padding: 10px 0; opacity: 0.15; }
+
+
+
+/* ------------------- Release Dates Clean Styles ------------------- */
+.filter h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #031d33;
+}
+
+.k-form-field {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.k-checkbox {
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+}
+
+.k-checkbox-label {
+  font-size: 0.9rem;
+  color: #031d33;
+}
+
+.year_column {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.year_column input[type="date"] {
+  width: calc(100% - 70px);
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+span.col_1 {
+  width: 60px;
+  color: #a4a4a4;
+  font-size: 0.9rem;
+}
+
+/* Disable date input if "All releases" is checked */
+#all_releases:checked ~ .year_column input[type="date"] {
+  background-color: #f0f0f0;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* Hover effect on checkboxes label */
+.k-form-field label:hover {
+  cursor: pointer;
+}
+
+/* Optional: Add spacing between the checkbox and date inputs */
+.filter .year_column:first-of-type {
+  margin-top: 5px;
+}
+
+
+.labels.hide {
+  display: none;
+}
+
+.labels {
+  margin-top: 6px;
+}
+
+.full_width {
+  width: 100%;
+  padding: 6px;
+}
+
+
+#release_country option {
+  padding-left: 25px;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+#release_country option[value="AM"] {
+  background-image: url('https://flagcdn.com/24x18/am.png');
+}
+
+/* You can add more flags dynamically using JS if needed */
+
+
+#release_country {
+  height: 32px;
+}
+
+#release_country option {
+  padding-left: 28px;
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: 20px 15px;
+}
+
+
+/* GENRES PANEL */
+div.filter h3 {
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  font-size: 1em;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+ul.multi_select.text {
+  margin-top: -8px;
+  padding: 0;
+  list-style: none;
+}
+
+ul.multi_select.text li {
+  display: inline-flex;
+  border: 1px solid #9e9e9e;
+  border-radius: 14px;
+  padding: 4px 12px;
+  font-size: .9em;
+  margin-right: 6px;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+ul.multi_select.text li:last-of-type {
+  margin-right: 0;
+}
+
+ul.multi_select.text li.selected,
+ul.multi_select.text li:hover {
+  background-color: rgba(0, 145, 255, 1); /* TMDB light blue */
+  color: #fff;
+  border-color: rgba(0, 145, 255, 1);
+}
+
+ul.multi_select.text li.no_hover,
+ul.multi_select.text li.no_hover a {
+  background-color: transparent;
+  color: #000;
+  border-color: #9e9e9e;
+}
+
+ul.multi_select.text li a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul.multi_select.text li a:hover {
+  color: #fff;
+}
+
+
+
+#release_country option {
+  padding-left: 20px;
+  background-size: 16px 12px;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+
+
+/* ================= FILTER SELECTS ================= */
+
+.filter select,
+.full_width {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 4px;
+  border: 1px solid #d7d7d7;
+  background-color: #fff;
+  font-size: 14px;
+  color: #000;
+  cursor: pointer;
+}
+
+.filter select:focus {
+  outline: none;
+  border-color: #01b4e4;
+  box-shadow: 0 0 0 1px #01b4e4;
+}
+
+.filter h3 {
+  font-size: 15px;
+  margin: 18px 0 8px;
+  font-weight: 600;
+}
+
+
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-trigger {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.dropdown-panel {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #ccc;
+  z-index: 10;
+}
+
+.dropdown-panel input {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  outline: none;
+}
+
+#country_list {
+  max-height: 220px;
+  overflow-y: auto;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#country_list li {
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+#country_list li:hover {
+  background: #f1f1f1;
+}
+
+.hide {
+  display: none;
+}
+
+
+
+/* FILTER PANEL TOGGLE */
+.filter_panel .filter {
+  display: block;
+}
+
+.filter_panel.closed .filter {
+  display: none;
+}
+
+/* rotate arrow */
+.filter_panel .chevron-right {
+  transition: transform 0.2s ease;
+}
+
+.filter_panel.closed .chevron-right {
+  transform: rotate(0deg);
+}
+
+.filter_panel:not(.closed) .chevron-right {
+  transform: rotate(90deg);
+}
+
+
+.language_dropdown {
+  position: relative;
+}
+
+#language_list {
+  max-height: 220px;
+  overflow-y: auto;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#language_list li {
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+#language_list li:hover {
+  background: #f1f1f1;
+}
+
+
+
+.slider-track {
+  position: absolute;
+  top: 7px;
+  height: 6px;
+  width: 100%;
+  background: #ddd;
+  border-radius: 3px;
+}
+
+.labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-top: 25px;
+  color: #666;
+}
+
+
+.filter_panel.closed .content {
+  display: none;
+}
+
+.filter_panel .name {
+  cursor: pointer;
+}
+
+
+
+/* ================= USER SCORE ================= */
+.user-score {
+  margin-bottom: 10px;
+}
+
+.user-score .slider-wrapper {
+  position: relative;
+  height: 40px;
+  padding: 0; /* no padding */
+  overflow: visible; /* allow input to overflow */
+}
+
+/* Range input */
+.user-score input[type="range"] {
+  position: absolute;
+  width: 110%;   /* make wider than wrapper */
+  left: -5%;     /* move slider left → first ball goes left, last goes right */
+  top: 22px;
+  pointer-events: none;
+  -webkit-appearance: none;
+  background: none;
+  z-index: 1;
+}
+
+
+
+/* Thumb (ball) */
+.user-score input[type="range"]::-webkit-slider-thumb {
+  pointer-events: auto;
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #01b4e4;
+  cursor: pointer;
+  margin-top: 4px; /* move thumb slightly below track */
+}
+.user-score input[type="range"]::-moz-range-thumb {
+  pointer-events: auto;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #01b4e4;
+  cursor: pointer;
+}
+
+/* Main track */
+.user-score .slider-track {
+  position: absolute;
+  top: 34px; /* keep track slightly above thumbs */
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #01b4e4;
+  border-radius: 4px;
+  z-index: 1;
+}
+
+/* Ticks */
+.user-score .ticks {
+  position: absolute;
+  top: 28px; /* ticks above track */
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+}
+.user-score .ticks span {
+  width: 1px;
+  height: 15px; /* short ticks */
+  background: #9e9e9e;
+  display: 1 1 100%;
+}
+
+/* Labels */
+.user-score .score-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #8c8c8c;
+  margin-top: 12px;
+}
+
+
+
+/* ================= MINIMUM USER VOTES ================= */
+.user-votes {
+  margin-bottom: 5px;
+  margin-top: -20px;
+}
+
+/* Slider wrapper */
+.user-votes .slider-wrapper {
+  position: relative;
+  height: 40px;
+  padding: 0;           /* no padding */
+  overflow: visible;    /* allow input to overflow */
+}
+
+/* Main track */
+.user-votes .slider-track {
+  position: absolute;
+  top: 34px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #01b4e4;
+  border-radius: 4px;
+  z-index: 1;
+}
+
+/* Range input */
+.user-votes input[type="range"] {
+  position: absolute;
+  width: 110%;   /* make wider than wrapper to allow full ball movement */
+  left: -5%;     /* shift slider so first ball can go a little left and last right */
+  top: 22px;
+  pointer-events: none;
+  -webkit-appearance: none;
+  background: none;
+  z-index: 4;
+}
+
+/* Thumb (ball) */
+.user-votes input[type="range"]::-webkit-slider-thumb {
+  pointer-events: auto;
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #01b4e4;
+  cursor: pointer;
+  margin-top: 4px;
+}
+.user-votes input[type="range"]::-moz-range-thumb {
+  pointer-events: auto;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #01b4e4;
+  cursor: pointer;
+}
+
+/* Ticks */
+.user-votes .ticks {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+}
+.user-votes .ticks span {
+  width: 1px;
+  height: 12px;           /* short tick */
+  background: #9e9e9e;
+  display: block;
+}
+
+/* Make labeled ticks slightly bigger */
+.user-votes .score-labels span {
+  font-size: 13px;
+  color: #8c8c8c;
+  position: relative;
+}
+
+/* optional: visually align bigger ticks with labels */
+.user-votes .score-labels span:nth-child(1),
+.user-votes .score-labels span:nth-child(2),
+.user-votes .score-labels span:nth-child(3),
+.user-votes .score-labels span:nth-child(4),
+.user-votes .score-labels span:nth-child(5),
+.user-votes .score-labels span:nth-child(6) {
+  font-weight: bold;   /* slightly bigger / bold to stand out */
+}
+
+/* Labels wrapper */
+.user-votes .score-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  padding: 0;
+}
+
+
+
+/* ================= RUNTIME ================= */
+.runtime {
+  margin-bottom: 10px;
+}
+
+.runtime .slider-wrapper {
+  position: relative;
+  height: 40px;
+  padding: 0;
+  overflow: visible;
+}
+
+/* Range inputs */
+.runtime input[type="range"] {
+  position: absolute;
+  width: 110%;   /* allows balls to go past first & last tick */
+  left: -5%;
+  top: 22px;
+  pointer-events: none;
+  -webkit-appearance: none;
+  background: none;
+  z-index: 4;
+}
+
+/* Thumbs (balls) */
+.runtime input[type="range"]::-webkit-slider-thumb {
+  pointer-events: auto;
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #01b4e4;
+  cursor: pointer;
+  margin-top: 4px;
+}
+.runtime input[type="range"]::-moz-range-thumb {
+  pointer-events: auto;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #01b4e4;
+  cursor: pointer;
+}
+
+/* Track */
+.runtime .slider-track {
+  position: absolute;
+  top: 34px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #01b4e4;
+  border-radius: 4px;
+  z-index: 1;
+}
+
+/* Ticks */
+.runtime .ticks {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+}
+.runtime .ticks span {
+  width: 1px;
+  height: 12px;
+  background: #9e9e9e;
+  display: block;
+}
+
+/* Labels */
+.runtime .score-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #8c8c8c;
+  margin-top: 12px;
+}
+
+
+.apply {
+  display: inline-block;
+  padding: 10px 25px;
+  background-color: #ccc; /* grey default */
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.apply.active {
+  background-color: #01b4e4; /* blue when active */
+}
+
+
+
+.load_more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    background-color: #007bff; /* blue */
+    padding: 10px 20px;
+    margin: 20px auto 0 auto; /* top margin to separate from cards */
+    border-radius: 6px;
+    width: 200px;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+
+.content_wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.right_column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the Load More button */
+}
+
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.load_more_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.load_more {
+  background-color: #01b4e4;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%; /* TMDB style: button spans the width */
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.load_more:hover {
+  background-color: #01779e;
+}
+
+
+.right_column {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.movies-grid {
+  display: grid;
+  /* Adjust columns to match TMDB style */
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); 
+  gap: 20px;
+  width: 100%;
+}
+
+.load_more {
+  margin: 30px 0;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #01b4e4;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
+/* Container for the circle */
+.user_score_chart {
+    position: relative;
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    background-color: #081c22; /* Dark circle background */
+    border-radius: 50%;
+    padding: 2px;
+    margin-top: -19px; /* Pulls it up over the image */
+    margin-left: 10px;
+}
+
+.user_score_chart canvas {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+}
+
+.user_score_chart .percent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 0.6em;
+    font-weight: bold;
+}
+
+.user_score_chart .percent span {
+    font-size: 0.5em;
+    margin-left: 1px;
+}
+
+/* Ensure movie-card is relative so the negative margin works */
+.movie-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.movie-card img {
+    border-radius: 8px;
+}
+
+
+
+/* The round button container */
+.options_container {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 10;
+    width: 26px;
+    height: 26px;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+/* Container for the 3 individual dots */
+.three_dots_wrapper {
+    display: flex;
+    gap: 2px; /* Equal space between each dot */
+    align-items: center;
+    justify-content: center;
+}
+
+/* The actual dots - perfectly identical */
+.three_dots_wrapper span {
+    width: 4px;
+    height: 4px;
+    background-color: #000;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.2s ease;
+}
+
+/* Hover Effects */
+.options_container:hover {
+    background-color: #01b4e4; /* TMDB Blue */
+}
+
+.options_container:hover .three_dots_wrapper span {
+    background-color: #fff; /* Dots turn white on blue background */
+}
+
+
+header.normal {
+    position: fixed; /* or sticky, depending on your layout */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100; /* Much higher than the dots (10) */
+    background-color: #032541; /* Ensure it's not transparent */
+}
+
+/* Ensure the main content doesn't hide under the fixed header */
+main {
+    padding-top: 20px; /* Adjust this to match your header's height */
+}
+
+
+
+.movie-info h3 {
+    font-weight: 700;
+    font-size: 1em;
+    margin: 0;
+    /* This creates the '...' after 2 lines */
+    display: -webkit-box;
+    -webkit-line-clamp: 2; 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 2.4em; /* Forces the box to always take up 2 lines of space */
+}
+
+
+
+.search_button_wrapper {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.apply_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 44px;
+    background-color: #e4e4e4; /* Light grey when disabled */
+    color: rgba(0,0,0,0.5);
+    font-size: 1.2em;
+    font-weight: 600;
+    border-radius: 20px;
+    cursor: not-allowed;
+    transition: all 0.2s ease;
+}
+
+/* When a user changes a filter, we add the .active class via JS */
+.apply_button.active {
+    background-color: #01b4e4; /* TMDB Blue */
+    color: #fff;
+    cursor: pointer;
+}
+
+.apply_button.active:hover {
+    background-color: #00a0d2;
+}
+
+
+
+
+/* Disabled state (default) */
+.apply_button {
+    width: 100%;
+    height: 44px;
+    background-color: #dbdbdb; /* Grey */
+    color: #999;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2em;
+    cursor: not-allowed;
+    transition: background-color 0.2s ease;
+}
+
+/* Active state (triggered by JS) */
+.apply_button.active {
+    background-color: #01b4e4; /* TMDB Blue */
+    color: #fff;
+}
+
+.apply_button.active:hover {
+    background-color: #00a0d2;
+}
+
+/* Genre selection styling */
+#with_genres li.selected {
+    background-color: #01b4e4;
+    border-color: #01b4e4;
+}
+#with_genres li.selected a {
+    color: #fff;
+}
+
+
+.pagination_wrapper {
+    width: 100%;
+    margin: 30px 0;
+    display: flex; 
+    justify-content: center;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* This class is toggled by JS to hide the bar on scroll */
+.pagination_wrapper.fade-out {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.load_more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    height: 50px;
+    background-color: #01b4e4; /* Bright Blue from your image */
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+}
